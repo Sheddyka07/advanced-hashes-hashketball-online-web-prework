@@ -110,10 +110,10 @@ def game_hash
         :blocks => 5,
         :slam_dunks => 1
       
-      } 
+        } 
+      }
     }
   }
-}
 end 
 
 def num_points_scored(player_name)

@@ -138,9 +138,9 @@ end
 
 def team_colors(team_name)
   colors = nil 
-  game_hash.each do |a, b|
-    if b[:team_name] == team_name 
-      colors = b[:colors]
+  game_hash.each do |loc, info|
+    if info[:team_name] == team_name 
+      colors = info[:colors]
     end
   end
   colors

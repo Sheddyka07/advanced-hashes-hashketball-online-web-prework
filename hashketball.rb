@@ -149,23 +149,21 @@ end
 
 def team_names
   array = []
-  game_hash.each do 
-
-
-
-
-
-
-
-
-
-def team_names
-  team_arr = []
-  game_hash.each do |home_away, info|
-    team_arr << info[:team_name]
+  game_hash.each do |loc, info|
+    array << info[:team_name]
   end
-  team_arr
+  array
 end
+
+
+
+
+
+
+
+
+
+
  def player_numbers(team)
   arr = []
   game_hash.each do |home_away, info|

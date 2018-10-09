@@ -2,7 +2,7 @@ def game_hash
     game_hash = {
         :home => {
             :team_name => "Brooklyn Nets",
-            :colors => ["Black", "White"], #Strings of team colors
+            :colors => ["Black", "White"], 
             :players => {
                 "Alan Anderson" => {
                     :number => 0,
@@ -118,14 +118,14 @@ end
 
 
 def num_points_scored(player_name)
-  game_hash.each do |team, players|
-    players.each do |name, info|
-      if name == player_name   #searches for player_name dictionary
-        return :points
-      end 
+  game_hash.each do |origin, team|
+    stats = team[:players][player_name]
+    if stats
+        return stats[:points]
+      end
     end
   end
-end
+     
 
 def shoe_size(player_name)
   game_hash.each do |team, players|

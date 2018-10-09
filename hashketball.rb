@@ -120,7 +120,7 @@ def num_points_scored(player_name)
   game_hash.each do |team, players|
     players.each do |name, info|
       if name == player_name   #searches for player_name dictionary
-        return info[:points]
+        return :points
       end 
     end
   end

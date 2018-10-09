@@ -126,17 +126,18 @@ def num_points_scored(player_name)
   end
 end
 
-#START BACK HERE 
-
- def shoe_size(player_name)
+def shoe_size(player_name)
   game_hash.each do |team, players|
-    players[:players].each do |name, info|
-      if name == player_name
+    players.each do |name, info|
+      if name == player_name   #searches for player_name dictionary
         return info[:shoe]
-      end
+      end 
     end
   end
 end
+
+
+
  def team_colors(team)
   ans = nil
   game_hash.each do |a, b|
